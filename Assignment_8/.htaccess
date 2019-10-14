@@ -1,0 +1,8 @@
+#AuthType Basic
+#AuthName "restricted area"
+#AuthUserFile /home/s/c/scastillobaez/public_html/cps276/06/.htpasswd
+#require valid-user
+
+RewriteEngine on
+RewriteCond %{REQUEST_URI} !^/~scastillobaez/cps276/08/index.php
+RewriteRule (.*) /~scastillobaez/cps276/08/index.php/$1 [L,QSA]
